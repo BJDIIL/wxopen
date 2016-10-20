@@ -1,16 +1,16 @@
-/*
- * ×¢Òâ£º
- * 1. ËùÓĞµÄJS½Ó¿ÚÖ»ÄÜÔÚ¹«ÖÚºÅ°ó¶¨µÄÓòÃûÏÂµ÷ÓÃ£¬¹«ÖÚºÅ¿ª·¢ÕßĞèÒªÏÈµÇÂ¼Î¢ĞÅ¹«ÖÚÆ½Ì¨½øÈë¡°¹«ÖÚºÅÉèÖÃ¡±µÄ¡°¹¦ÄÜÉèÖÃ¡±ÀïÌîĞ´¡°JS½Ó¿Ú°²È«ÓòÃû¡±¡£
- * 2. Èç¹û·¢ÏÖÔÚ Android ²»ÄÜ·ÖÏí×Ô¶¨ÒåÄÚÈİ£¬Çëµ½¹ÙÍøÏÂÔØ×îĞÂµÄ°ü¸²¸Ç°²×°£¬Android ×Ô¶¨Òå·ÖÏí½Ó¿ÚĞèÉı¼¶ÖÁ 6.0.2.58 °æ±¾¼°ÒÔÉÏ¡£
- * 3. ÍêÕû JS-SDK ÎÄµµµØÖ·£ºhttp://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+ï»¿/*
+ * æ³¨æ„ï¼š
+ * 1. æ‰€æœ‰çš„JSæ¥å£åªèƒ½åœ¨å…¬ä¼—å·ç»‘å®šçš„åŸŸåä¸‹è°ƒç”¨ï¼Œå…¬ä¼—å·å¼€å‘è€…éœ€è¦å…ˆç™»å½•å¾®ä¿¡å…¬ä¼—å¹³å°è¿›å…¥â€œå…¬ä¼—å·è®¾ç½®â€çš„â€œåŠŸèƒ½è®¾ç½®â€é‡Œå¡«å†™â€œJSæ¥å£å®‰å…¨åŸŸåâ€ã€‚
+ * 2. å¦‚æœå‘ç°åœ¨ Android ä¸èƒ½åˆ†äº«è‡ªå®šä¹‰å†…å®¹ï¼Œè¯·åˆ°å®˜ç½‘ä¸‹è½½æœ€æ–°çš„åŒ…è¦†ç›–å®‰è£…ï¼ŒAndroid è‡ªå®šä¹‰åˆ†äº«æ¥å£éœ€å‡çº§è‡³ 6.0.2.58 ç‰ˆæœ¬åŠä»¥ä¸Šã€‚
+ * 3. å®Œæ•´ JS-SDK æ–‡æ¡£åœ°å€ï¼šhttp://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
  *
- * ÈçÓĞÎÊÌâÇëÍ¨¹ıÒÔÏÂÇşµÀ·´À¡£º
- * ÓÊÏäµØÖ·£ºweixin-open@qq.com
- * ÓÊ¼şÖ÷Ìâ£º¡¾Î¢ĞÅJS-SDK·´À¡¡¿¾ßÌåÎÊÌâ
- * ÓÊ¼şÄÚÈİËµÃ÷£ºÓÃ¼òÃ÷µÄÓïÑÔÃèÊöÎÊÌâËùÔÚ£¬²¢½»´úÇå³şÓöµ½¸ÃÎÊÌâµÄ³¡¾°£¬¿É¸½ÉÏ½ØÆÁÍ¼Æ¬£¬Î¢ĞÅÍÅ¶Ó»á¾¡¿ì´¦ÀíÄãµÄ·´À¡¡£
+ * å¦‚æœ‰é—®é¢˜è¯·é€šè¿‡ä»¥ä¸‹æ¸ é“åé¦ˆï¼š
+ * é‚®ç®±åœ°å€ï¼šweixin-open@qq.com
+ * é‚®ä»¶ä¸»é¢˜ï¼šã€å¾®ä¿¡JS-SDKåé¦ˆã€‘å…·ä½“é—®é¢˜
+ * é‚®ä»¶å†…å®¹è¯´æ˜ï¼šç”¨ç®€æ˜çš„è¯­è¨€æè¿°é—®é¢˜æ‰€åœ¨ï¼Œå¹¶äº¤ä»£æ¸…æ¥šé‡åˆ°è¯¥é—®é¢˜çš„åœºæ™¯ï¼Œå¯é™„ä¸Šæˆªå±å›¾ç‰‡ï¼Œå¾®ä¿¡å›¢é˜Ÿä¼šå°½å¿«å¤„ç†ä½ çš„åé¦ˆã€‚
  */
 wx.ready(function () {
-    // 1 ÅĞ¶Ïµ±Ç°°æ±¾ÊÇ·ñÖ§³ÖÖ¸¶¨ JS ½Ó¿Ú£¬Ö§³ÖÅúÁ¿ÅĞ¶Ï
+    // 1 åˆ¤æ–­å½“å‰ç‰ˆæœ¬æ˜¯å¦æ”¯æŒæŒ‡å®š JS æ¥å£ï¼Œæ”¯æŒæ‰¹é‡åˆ¤æ–­
     document.querySelector('#checkJsApi').onclick = function () {
         wx.checkJsApi({
             jsApiList: [
@@ -23,167 +23,167 @@ wx.ready(function () {
         });
     };
 
-    // 2. ·ÖÏí½Ó¿Ú
-    // 2.1 ¼àÌı¡°·ÖÏí¸øÅóÓÑ¡±£¬°´Å¥µã»÷¡¢×Ô¶¨Òå·ÖÏíÄÚÈİ¼°·ÖÏí½á¹û½Ó¿Ú
+    // 2. åˆ†äº«æ¥å£
+    // 2.1 ç›‘å¬â€œåˆ†äº«ç»™æœ‹å‹â€ï¼ŒæŒ‰é’®ç‚¹å‡»ã€è‡ªå®šä¹‰åˆ†äº«å†…å®¹åŠåˆ†äº«ç»“æœæ¥å£
     document.querySelector('#onMenuShareAppMessage').onclick = function () {
         wx.onMenuShareAppMessage({
-            title: '»¥ÁªÍøÖ®×Ó',
-            desc: 'ÔÚ³¤´óµÄ¹ı³ÌÖĞ£¬ÎÒ²ÅÂıÂı·¢ÏÖ£¬ÎÒÉí±ßµÄËùÓĞÊÂ£¬±ğÈË¸úÎÒËµµÄËùÓĞÊÂ£¬ÄÇĞ©ËùÎ½±¾À´Èç´Ë£¬×¢¶¨Èç´ËµÄÊÂ£¬ËüÃÇÆäÊµÃ»ÓĞ·ÇµÃÈç´Ë£¬ÊÂÇéÊÇ¿ÉÒÔ¸Ä±äµÄ¡£¸üÖØÒªµÄÊÇ£¬ÓĞĞ©ÊÂ¼ÈÈ»´íÁË£¬ÄÇ¾Í¸Ã×ö³ö¸Ä±ä¡£',
+            title: 'äº’è”ç½‘ä¹‹å­',
+            desc: 'åœ¨é•¿å¤§çš„è¿‡ç¨‹ä¸­ï¼Œæˆ‘æ‰æ…¢æ…¢å‘ç°ï¼Œæˆ‘èº«è¾¹çš„æ‰€æœ‰äº‹ï¼Œåˆ«äººè·Ÿæˆ‘è¯´çš„æ‰€æœ‰äº‹ï¼Œé‚£äº›æ‰€è°“æœ¬æ¥å¦‚æ­¤ï¼Œæ³¨å®šå¦‚æ­¤çš„äº‹ï¼Œå®ƒä»¬å…¶å®æ²¡æœ‰éå¾—å¦‚æ­¤ï¼Œäº‹æƒ…æ˜¯å¯ä»¥æ”¹å˜çš„ã€‚æ›´é‡è¦çš„æ˜¯ï¼Œæœ‰äº›äº‹æ—¢ç„¶é”™äº†ï¼Œé‚£å°±è¯¥åšå‡ºæ”¹å˜ã€‚',
             link: 'http://movie.douban.com/subject/25785114/',
             imgUrl: 'http://demo.open.weixin.qq.com/jssdk/images/p2166127561.jpg',
             trigger: function (res) {
-                // ²»Òª³¢ÊÔÔÚtriggerÖĞÊ¹ÓÃajaxÒì²½ÇëÇóĞŞ¸Ä±¾´Î·ÖÏíµÄÄÚÈİ£¬ÒòÎª¿Í»§¶Ë·ÖÏí²Ù×÷ÊÇÒ»¸öÍ¬²½²Ù×÷£¬ÕâÊ±ºòÊ¹ÓÃajaxµÄ»Ø°ü»á»¹Ã»ÓĞ·µ»Ø
-                alert('ÓÃ»§µã»÷·¢ËÍ¸øÅóÓÑ');
+                // ä¸è¦å°è¯•åœ¨triggerä¸­ä½¿ç”¨ajaxå¼‚æ­¥è¯·æ±‚ä¿®æ”¹æœ¬æ¬¡åˆ†äº«çš„å†…å®¹ï¼Œå› ä¸ºå®¢æˆ·ç«¯åˆ†äº«æ“ä½œæ˜¯ä¸€ä¸ªåŒæ­¥æ“ä½œï¼Œè¿™æ—¶å€™ä½¿ç”¨ajaxçš„å›åŒ…ä¼šè¿˜æ²¡æœ‰è¿”å›
+                alert('ç”¨æˆ·ç‚¹å‡»å‘é€ç»™æœ‹å‹');
             },
             success: function (res) {
-                alert('ÒÑ·ÖÏí');
+                alert('å·²åˆ†äº«');
             },
             cancel: function (res) {
-                alert('ÒÑÈ¡Ïû');
+                alert('å·²å–æ¶ˆ');
             },
             fail: function (res) {
                 alert(JSON.stringify(res));
             }
         });
-        alert('ÒÑ×¢²á»ñÈ¡¡°·¢ËÍ¸øÅóÓÑ¡±×´Ì¬ÊÂ¼ş');
+        alert('å·²æ³¨å†Œè·å–â€œå‘é€ç»™æœ‹å‹â€çŠ¶æ€äº‹ä»¶');
     };
 
-    // 2.2 ¼àÌı¡°·ÖÏíµ½ÅóÓÑÈ¦¡±°´Å¥µã»÷¡¢×Ô¶¨Òå·ÖÏíÄÚÈİ¼°·ÖÏí½á¹û½Ó¿Ú
+    // 2.2 ç›‘å¬â€œåˆ†äº«åˆ°æœ‹å‹åœˆâ€æŒ‰é’®ç‚¹å‡»ã€è‡ªå®šä¹‰åˆ†äº«å†…å®¹åŠåˆ†äº«ç»“æœæ¥å£
     document.querySelector('#onMenuShareTimeline').onclick = function () {
         wx.onMenuShareTimeline({
-            title: '»¥ÁªÍøÖ®×Ó',
+            title: 'äº’è”ç½‘ä¹‹å­',
             link: 'http://movie.douban.com/subject/25785114/',
             imgUrl: 'http://demo.open.weixin.qq.com/jssdk/images/p2166127561.jpg',
             trigger: function (res) {
-                // ²»Òª³¢ÊÔÔÚtriggerÖĞÊ¹ÓÃajaxÒì²½ÇëÇóĞŞ¸Ä±¾´Î·ÖÏíµÄÄÚÈİ£¬ÒòÎª¿Í»§¶Ë·ÖÏí²Ù×÷ÊÇÒ»¸öÍ¬²½²Ù×÷£¬ÕâÊ±ºòÊ¹ÓÃajaxµÄ»Ø°ü»á»¹Ã»ÓĞ·µ»Ø
-                alert('ÓÃ»§µã»÷·ÖÏíµ½ÅóÓÑÈ¦');
+                // ä¸è¦å°è¯•åœ¨triggerä¸­ä½¿ç”¨ajaxå¼‚æ­¥è¯·æ±‚ä¿®æ”¹æœ¬æ¬¡åˆ†äº«çš„å†…å®¹ï¼Œå› ä¸ºå®¢æˆ·ç«¯åˆ†äº«æ“ä½œæ˜¯ä¸€ä¸ªåŒæ­¥æ“ä½œï¼Œè¿™æ—¶å€™ä½¿ç”¨ajaxçš„å›åŒ…ä¼šè¿˜æ²¡æœ‰è¿”å›
+                alert('ç”¨æˆ·ç‚¹å‡»åˆ†äº«åˆ°æœ‹å‹åœˆ');
             },
             success: function (res) {
-                alert('ÒÑ·ÖÏí');
+                alert('å·²åˆ†äº«');
             },
             cancel: function (res) {
-                alert('ÒÑÈ¡Ïû');
+                alert('å·²å–æ¶ˆ');
             },
             fail: function (res) {
                 alert(JSON.stringify(res));
             }
         });
-        alert('ÒÑ×¢²á»ñÈ¡¡°·ÖÏíµ½ÅóÓÑÈ¦¡±×´Ì¬ÊÂ¼ş');
+        alert('å·²æ³¨å†Œè·å–â€œåˆ†äº«åˆ°æœ‹å‹åœˆâ€çŠ¶æ€äº‹ä»¶');
     };
 
-    // 2.3 ¼àÌı¡°·ÖÏíµ½QQ¡±°´Å¥µã»÷¡¢×Ô¶¨Òå·ÖÏíÄÚÈİ¼°·ÖÏí½á¹û½Ó¿Ú
+    // 2.3 ç›‘å¬â€œåˆ†äº«åˆ°QQâ€æŒ‰é’®ç‚¹å‡»ã€è‡ªå®šä¹‰åˆ†äº«å†…å®¹åŠåˆ†äº«ç»“æœæ¥å£
     document.querySelector('#onMenuShareQQ').onclick = function () {
         wx.onMenuShareQQ({
-            title: '»¥ÁªÍøÖ®×Ó',
-            desc: 'ÔÚ³¤´óµÄ¹ı³ÌÖĞ£¬ÎÒ²ÅÂıÂı·¢ÏÖ£¬ÎÒÉí±ßµÄËùÓĞÊÂ£¬±ğÈË¸úÎÒËµµÄËùÓĞÊÂ£¬ÄÇĞ©ËùÎ½±¾À´Èç´Ë£¬×¢¶¨Èç´ËµÄÊÂ£¬ËüÃÇÆäÊµÃ»ÓĞ·ÇµÃÈç´Ë£¬ÊÂÇéÊÇ¿ÉÒÔ¸Ä±äµÄ¡£¸üÖØÒªµÄÊÇ£¬ÓĞĞ©ÊÂ¼ÈÈ»´íÁË£¬ÄÇ¾Í¸Ã×ö³ö¸Ä±ä¡£',
+            title: 'äº’è”ç½‘ä¹‹å­',
+            desc: 'åœ¨é•¿å¤§çš„è¿‡ç¨‹ä¸­ï¼Œæˆ‘æ‰æ…¢æ…¢å‘ç°ï¼Œæˆ‘èº«è¾¹çš„æ‰€æœ‰äº‹ï¼Œåˆ«äººè·Ÿæˆ‘è¯´çš„æ‰€æœ‰äº‹ï¼Œé‚£äº›æ‰€è°“æœ¬æ¥å¦‚æ­¤ï¼Œæ³¨å®šå¦‚æ­¤çš„äº‹ï¼Œå®ƒä»¬å…¶å®æ²¡æœ‰éå¾—å¦‚æ­¤ï¼Œäº‹æƒ…æ˜¯å¯ä»¥æ”¹å˜çš„ã€‚æ›´é‡è¦çš„æ˜¯ï¼Œæœ‰äº›äº‹æ—¢ç„¶é”™äº†ï¼Œé‚£å°±è¯¥åšå‡ºæ”¹å˜ã€‚',
             link: 'http://movie.douban.com/subject/25785114/',
             imgUrl: 'http://img3.douban.com/view/movie_poster_cover/spst/public/p2166127561.jpg',
             trigger: function (res) {
-                alert('ÓÃ»§µã»÷·ÖÏíµ½QQ');
+                alert('ç”¨æˆ·ç‚¹å‡»åˆ†äº«åˆ°QQ');
             },
             complete: function (res) {
                 alert(JSON.stringify(res));
             },
             success: function (res) {
-                alert('ÒÑ·ÖÏí');
+                alert('å·²åˆ†äº«');
             },
             cancel: function (res) {
-                alert('ÒÑÈ¡Ïû');
+                alert('å·²å–æ¶ˆ');
             },
             fail: function (res) {
                 alert(JSON.stringify(res));
             }
         });
-        alert('ÒÑ×¢²á»ñÈ¡¡°·ÖÏíµ½ QQ¡±×´Ì¬ÊÂ¼ş');
+        alert('å·²æ³¨å†Œè·å–â€œåˆ†äº«åˆ° QQâ€çŠ¶æ€äº‹ä»¶');
     };
 
-    // 2.4 ¼àÌı¡°·ÖÏíµ½Î¢²©¡±°´Å¥µã»÷¡¢×Ô¶¨Òå·ÖÏíÄÚÈİ¼°·ÖÏí½á¹û½Ó¿Ú
+    // 2.4 ç›‘å¬â€œåˆ†äº«åˆ°å¾®åšâ€æŒ‰é’®ç‚¹å‡»ã€è‡ªå®šä¹‰åˆ†äº«å†…å®¹åŠåˆ†äº«ç»“æœæ¥å£
     document.querySelector('#onMenuShareWeibo').onclick = function () {
         wx.onMenuShareWeibo({
-            title: '»¥ÁªÍøÖ®×Ó',
-            desc: 'ÔÚ³¤´óµÄ¹ı³ÌÖĞ£¬ÎÒ²ÅÂıÂı·¢ÏÖ£¬ÎÒÉí±ßµÄËùÓĞÊÂ£¬±ğÈË¸úÎÒËµµÄËùÓĞÊÂ£¬ÄÇĞ©ËùÎ½±¾À´Èç´Ë£¬×¢¶¨Èç´ËµÄÊÂ£¬ËüÃÇÆäÊµÃ»ÓĞ·ÇµÃÈç´Ë£¬ÊÂÇéÊÇ¿ÉÒÔ¸Ä±äµÄ¡£¸üÖØÒªµÄÊÇ£¬ÓĞĞ©ÊÂ¼ÈÈ»´íÁË£¬ÄÇ¾Í¸Ã×ö³ö¸Ä±ä¡£',
+            title: 'äº’è”ç½‘ä¹‹å­',
+            desc: 'åœ¨é•¿å¤§çš„è¿‡ç¨‹ä¸­ï¼Œæˆ‘æ‰æ…¢æ…¢å‘ç°ï¼Œæˆ‘èº«è¾¹çš„æ‰€æœ‰äº‹ï¼Œåˆ«äººè·Ÿæˆ‘è¯´çš„æ‰€æœ‰äº‹ï¼Œé‚£äº›æ‰€è°“æœ¬æ¥å¦‚æ­¤ï¼Œæ³¨å®šå¦‚æ­¤çš„äº‹ï¼Œå®ƒä»¬å…¶å®æ²¡æœ‰éå¾—å¦‚æ­¤ï¼Œäº‹æƒ…æ˜¯å¯ä»¥æ”¹å˜çš„ã€‚æ›´é‡è¦çš„æ˜¯ï¼Œæœ‰äº›äº‹æ—¢ç„¶é”™äº†ï¼Œé‚£å°±è¯¥åšå‡ºæ”¹å˜ã€‚',
             link: 'http://movie.douban.com/subject/25785114/',
             imgUrl: 'http://img3.douban.com/view/movie_poster_cover/spst/public/p2166127561.jpg',
             trigger: function (res) {
-                alert('ÓÃ»§µã»÷·ÖÏíµ½Î¢²©');
+                alert('ç”¨æˆ·ç‚¹å‡»åˆ†äº«åˆ°å¾®åš');
             },
             complete: function (res) {
                 alert(JSON.stringify(res));
             },
             success: function (res) {
-                alert('ÒÑ·ÖÏí');
+                alert('å·²åˆ†äº«');
             },
             cancel: function (res) {
-                alert('ÒÑÈ¡Ïû');
+                alert('å·²å–æ¶ˆ');
             },
             fail: function (res) {
                 alert(JSON.stringify(res));
             }
         });
-        alert('ÒÑ×¢²á»ñÈ¡¡°·ÖÏíµ½Î¢²©¡±×´Ì¬ÊÂ¼ş');
+        alert('å·²æ³¨å†Œè·å–â€œåˆ†äº«åˆ°å¾®åšâ€çŠ¶æ€äº‹ä»¶');
     };
 
-    // 2.5 ¼àÌı¡°·ÖÏíµ½QZone¡±°´Å¥µã»÷¡¢×Ô¶¨Òå·ÖÏíÄÚÈİ¼°·ÖÏí½Ó¿Ú
+    // 2.5 ç›‘å¬â€œåˆ†äº«åˆ°QZoneâ€æŒ‰é’®ç‚¹å‡»ã€è‡ªå®šä¹‰åˆ†äº«å†…å®¹åŠåˆ†äº«æ¥å£
     document.querySelector('#onMenuShareQZone').onclick = function () {
         wx.onMenuShareQZone({
-            title: '»¥ÁªÍøÖ®×Ó',
-            desc: 'ÔÚ³¤´óµÄ¹ı³ÌÖĞ£¬ÎÒ²ÅÂıÂı·¢ÏÖ£¬ÎÒÉí±ßµÄËùÓĞÊÂ£¬±ğÈË¸úÎÒËµµÄËùÓĞÊÂ£¬ÄÇĞ©ËùÎ½±¾À´Èç´Ë£¬×¢¶¨Èç´ËµÄÊÂ£¬ËüÃÇÆäÊµÃ»ÓĞ·ÇµÃÈç´Ë£¬ÊÂÇéÊÇ¿ÉÒÔ¸Ä±äµÄ¡£¸üÖØÒªµÄÊÇ£¬ÓĞĞ©ÊÂ¼ÈÈ»´íÁË£¬ÄÇ¾Í¸Ã×ö³ö¸Ä±ä¡£',
+            title: 'äº’è”ç½‘ä¹‹å­',
+            desc: 'åœ¨é•¿å¤§çš„è¿‡ç¨‹ä¸­ï¼Œæˆ‘æ‰æ…¢æ…¢å‘ç°ï¼Œæˆ‘èº«è¾¹çš„æ‰€æœ‰äº‹ï¼Œåˆ«äººè·Ÿæˆ‘è¯´çš„æ‰€æœ‰äº‹ï¼Œé‚£äº›æ‰€è°“æœ¬æ¥å¦‚æ­¤ï¼Œæ³¨å®šå¦‚æ­¤çš„äº‹ï¼Œå®ƒä»¬å…¶å®æ²¡æœ‰éå¾—å¦‚æ­¤ï¼Œäº‹æƒ…æ˜¯å¯ä»¥æ”¹å˜çš„ã€‚æ›´é‡è¦çš„æ˜¯ï¼Œæœ‰äº›äº‹æ—¢ç„¶é”™äº†ï¼Œé‚£å°±è¯¥åšå‡ºæ”¹å˜ã€‚',
             link: 'http://movie.douban.com/subject/25785114/',
             imgUrl: 'http://img3.douban.com/view/movie_poster_cover/spst/public/p2166127561.jpg',
             trigger: function (res) {
-                alert('ÓÃ»§µã»÷·ÖÏíµ½QZone');
+                alert('ç”¨æˆ·ç‚¹å‡»åˆ†äº«åˆ°QZone');
             },
             complete: function (res) {
                 alert(JSON.stringify(res));
             },
             success: function (res) {
-                alert('ÒÑ·ÖÏí');
+                alert('å·²åˆ†äº«');
             },
             cancel: function (res) {
-                alert('ÒÑÈ¡Ïû');
+                alert('å·²å–æ¶ˆ');
             },
             fail: function (res) {
                 alert(JSON.stringify(res));
             }
         });
-        alert('ÒÑ×¢²á»ñÈ¡¡°·ÖÏíµ½QZone¡±×´Ì¬ÊÂ¼ş');
+        alert('å·²æ³¨å†Œè·å–â€œåˆ†äº«åˆ°QZoneâ€çŠ¶æ€äº‹ä»¶');
     };
 
 
-    // 3 ÖÇÄÜ½Ó¿Ú
+    // 3 æ™ºèƒ½æ¥å£
     var voice = {
         localId: '',
         serverId: ''
     };
-    // 3.1 Ê¶±ğÒôÆµ²¢·µ»ØÊ¶±ğ½á¹û
+    // 3.1 è¯†åˆ«éŸ³é¢‘å¹¶è¿”å›è¯†åˆ«ç»“æœ
     document.querySelector('#translateVoice').onclick = function () {
         if (voice.localId == '') {
-            alert('ÇëÏÈÊ¹ÓÃ startRecord ½Ó¿ÚÂ¼ÖÆÒ»¶ÎÉùÒô');
+            alert('è¯·å…ˆä½¿ç”¨ startRecord æ¥å£å½•åˆ¶ä¸€æ®µå£°éŸ³');
             return;
         }
         wx.translateVoice({
             localId: voice.localId,
             complete: function (res) {
                 if (res.hasOwnProperty('translateResult')) {
-                    alert('Ê¶±ğ½á¹û£º' + res.translateResult);
+                    alert('è¯†åˆ«ç»“æœï¼š' + res.translateResult);
                 } else {
-                    alert('ÎŞ·¨Ê¶±ğ');
+                    alert('æ— æ³•è¯†åˆ«');
                 }
             }
         });
     };
 
-    // 4 ÒôÆµ½Ó¿Ú
-    // 4.2 ¿ªÊ¼Â¼Òô
+    // 4 éŸ³é¢‘æ¥å£
+    // 4.2 å¼€å§‹å½•éŸ³
     document.querySelector('#startRecord').onclick = function () {
         wx.startRecord({
             cancel: function () {
-                alert('ÓÃ»§¾Ü¾øÊÚÈ¨Â¼Òô');
+                alert('ç”¨æˆ·æ‹’ç»æˆæƒå½•éŸ³');
             }
         });
     };
 
-    // 4.3 Í£Ö¹Â¼Òô
+    // 4.3 åœæ­¢å½•éŸ³
     document.querySelector('#stopRecord').onclick = function () {
         wx.stopRecord({
             success: function (res) {
@@ -195,18 +195,18 @@ wx.ready(function () {
         });
     };
 
-    // 4.4 ¼àÌıÂ¼Òô×Ô¶¯Í£Ö¹
+    // 4.4 ç›‘å¬å½•éŸ³è‡ªåŠ¨åœæ­¢
     wx.onVoiceRecordEnd({
         complete: function (res) {
             voice.localId = res.localId;
-            alert('Â¼ÒôÊ±¼äÒÑ³¬¹ıÒ»·ÖÖÓ');
+            alert('å½•éŸ³æ—¶é—´å·²è¶…è¿‡ä¸€åˆ†é’Ÿ');
         }
     });
 
-    // 4.5 ²¥·ÅÒôÆµ
+    // 4.5 æ’­æ”¾éŸ³é¢‘
     document.querySelector('#playVoice').onclick = function () {
         if (voice.localId == '') {
-            alert('ÇëÏÈÊ¹ÓÃ startRecord ½Ó¿ÚÂ¼ÖÆÒ»¶ÎÉùÒô');
+            alert('è¯·å…ˆä½¿ç”¨ startRecord æ¥å£å½•åˆ¶ä¸€æ®µå£°éŸ³');
             return;
         }
         wx.playVoice({
@@ -214,59 +214,59 @@ wx.ready(function () {
         });
     };
 
-    // 4.6 ÔİÍ£²¥·ÅÒôÆµ
+    // 4.6 æš‚åœæ’­æ”¾éŸ³é¢‘
     document.querySelector('#pauseVoice').onclick = function () {
         wx.pauseVoice({
             localId: voice.localId
         });
     };
 
-    // 4.7 Í£Ö¹²¥·ÅÒôÆµ
+    // 4.7 åœæ­¢æ’­æ”¾éŸ³é¢‘
     document.querySelector('#stopVoice').onclick = function () {
         wx.stopVoice({
             localId: voice.localId
         });
     };
 
-    // 4.8 ¼àÌıÂ¼Òô²¥·ÅÍ£Ö¹
+    // 4.8 ç›‘å¬å½•éŸ³æ’­æ”¾åœæ­¢
     wx.onVoicePlayEnd({
         complete: function (res) {
-            alert('Â¼Òô£¨' + res.localId + '£©²¥·Å½áÊø');
+            alert('å½•éŸ³ï¼ˆ' + res.localId + 'ï¼‰æ’­æ”¾ç»“æŸ');
         }
     });
 
-    // 4.8 ÉÏ´«ÓïÒô
+    // 4.8 ä¸Šä¼ è¯­éŸ³
     document.querySelector('#uploadVoice').onclick = function () {
         if (voice.localId == '') {
-            alert('ÇëÏÈÊ¹ÓÃ startRecord ½Ó¿ÚÂ¼ÖÆÒ»¶ÎÉùÒô');
+            alert('è¯·å…ˆä½¿ç”¨ startRecord æ¥å£å½•åˆ¶ä¸€æ®µå£°éŸ³');
             return;
         }
         wx.uploadVoice({
             localId: voice.localId,
             success: function (res) {
-                alert('ÉÏ´«ÓïÒô³É¹¦£¬serverId Îª' + res.serverId);
+                alert('ä¸Šä¼ è¯­éŸ³æˆåŠŸï¼ŒserverId ä¸º' + res.serverId);
                 voice.serverId = res.serverId;
             }
         });
     };
 
-    // 4.9 ÏÂÔØÓïÒô
+    // 4.9 ä¸‹è½½è¯­éŸ³
     document.querySelector('#downloadVoice').onclick = function () {
         if (voice.serverId == '') {
-            alert('ÇëÏÈÊ¹ÓÃ uploadVoice ÉÏ´«ÉùÒô');
+            alert('è¯·å…ˆä½¿ç”¨ uploadVoice ä¸Šä¼ å£°éŸ³');
             return;
         }
         wx.downloadVoice({
             serverId: voice.serverId,
             success: function (res) {
-                alert('ÏÂÔØÓïÒô³É¹¦£¬localId Îª' + res.localId);
+                alert('ä¸‹è½½è¯­éŸ³æˆåŠŸï¼ŒlocalId ä¸º' + res.localId);
                 voice.localId = res.localId;
             }
         });
     };
 
-    // 5 Í¼Æ¬½Ó¿Ú
-    // 5.1 ÅÄÕÕ¡¢±¾µØÑ¡Í¼
+    // 5 å›¾ç‰‡æ¥å£
+    // 5.1 æ‹ç…§ã€æœ¬åœ°é€‰å›¾
     var images = {
         localId: [],
         serverId: []
@@ -275,12 +275,12 @@ wx.ready(function () {
         wx.chooseImage({
             success: function (res) {
                 images.localId = res.localIds;
-                alert('ÒÑÑ¡Ôñ ' + res.localIds.length + ' ÕÅÍ¼Æ¬');
+                alert('å·²é€‰æ‹© ' + res.localIds.length + ' å¼ å›¾ç‰‡');
             }
         });
     };
 
-    // 5.2 Í¼Æ¬Ô¤ÀÀ
+    // 5.2 å›¾ç‰‡é¢„è§ˆ
     document.querySelector('#previewImage').onclick = function () {
         wx.previewImage({
             current: 'http://img5.douban.com/view/photo/photo/public/p1353993776.jpg',
@@ -292,10 +292,10 @@ wx.ready(function () {
         });
     };
 
-    // 5.3 ÉÏ´«Í¼Æ¬
+    // 5.3 ä¸Šä¼ å›¾ç‰‡
     document.querySelector('#uploadImage').onclick = function () {
         if (images.localId.length == 0) {
-            alert('ÇëÏÈÊ¹ÓÃ chooseImage ½Ó¿ÚÑ¡ÔñÍ¼Æ¬');
+            alert('è¯·å…ˆä½¿ç”¨ chooseImage æ¥å£é€‰æ‹©å›¾ç‰‡');
             return;
         }
         var i = 0, length = images.localId.length;
@@ -305,7 +305,7 @@ wx.ready(function () {
                 localId: images.localId[i],
                 success: function (res) {
                     i++;
-                    //alert('ÒÑÉÏ´«£º' + i + '/' + length);
+                    //alert('å·²ä¸Šä¼ ï¼š' + i + '/' + length);
                     images.serverId.push(res.serverId);
                     if (i < length) {
                         upload();
@@ -320,10 +320,10 @@ wx.ready(function () {
         upload();
     };
 
-    // 5.4 ÏÂÔØÍ¼Æ¬
+    // 5.4 ä¸‹è½½å›¾ç‰‡
     document.querySelector('#downloadImage').onclick = function () {
         if (images.serverId.length === 0) {
-            alert('ÇëÏÈÊ¹ÓÃ uploadImage ÉÏ´«Í¼Æ¬');
+            alert('è¯·å…ˆä½¿ç”¨ uploadImage ä¸Šä¼ å›¾ç‰‡');
             return;
         }
         var i = 0, length = images.serverId.length;
@@ -333,7 +333,7 @@ wx.ready(function () {
                 serverId: images.serverId[i],
                 success: function (res) {
                     i++;
-                    alert('ÒÑÏÂÔØ£º' + i + '/' + length);
+                    alert('å·²ä¸‹è½½ï¼š' + i + '/' + length);
                     images.localId.push(res.localId);
                     if (i < length) {
                         download();
@@ -345,8 +345,8 @@ wx.ready(function () {
         download();
     };
 
-    // 6 Éè±¸ĞÅÏ¢½Ó¿Ú
-    // 6.1 »ñÈ¡µ±Ç°ÍøÂç×´Ì¬
+    // 6 è®¾å¤‡ä¿¡æ¯æ¥å£
+    // 6.1 è·å–å½“å‰ç½‘ç»œçŠ¶æ€
     document.querySelector('#getNetworkType').onclick = function () {
         wx.getNetworkType({
             success: function (res) {
@@ -358,52 +358,52 @@ wx.ready(function () {
         });
     };
 
-    // 7 µØÀíÎ»ÖÃ½Ó¿Ú
-    // 7.1 ²é¿´µØÀíÎ»ÖÃ
+    // 7 åœ°ç†ä½ç½®æ¥å£
+    // 7.1 æŸ¥çœ‹åœ°ç†ä½ç½®
     document.querySelector('#openLocation').onclick = function () {
         wx.openLocation({
             latitude: 23.099994,
             longitude: 113.324520,
-            name: 'TIT ´´ÒâÔ°',
-            address: '¹ãÖİÊĞº£ÖéÇøĞÂ¸ÛÖĞÂ· 397 ºÅ',
+            name: 'TIT åˆ›æ„å›­',
+            address: 'å¹¿å·å¸‚æµ·ç åŒºæ–°æ¸¯ä¸­è·¯ 397 å·',
             scale: 14,
             infoUrl: 'http://weixin.qq.com'
         });
     };
 
-    // 7.2 »ñÈ¡µ±Ç°µØÀíÎ»ÖÃ
+    // 7.2 è·å–å½“å‰åœ°ç†ä½ç½®
     document.querySelector('#getLocation').onclick = function () {
         wx.getLocation({
             success: function (res) {
                 alert(JSON.stringify(res));
             },
             cancel: function (res) {
-                alert('ÓÃ»§¾Ü¾øÊÚÈ¨»ñÈ¡µØÀíÎ»ÖÃ');
+                alert('ç”¨æˆ·æ‹’ç»æˆæƒè·å–åœ°ç†ä½ç½®');
             }
         });
     };
 
-    // 8 ½çÃæ²Ù×÷½Ó¿Ú
-    // 8.1 Òş²ØÓÒÉÏ½Ç²Ëµ¥
+    // 8 ç•Œé¢æ“ä½œæ¥å£
+    // 8.1 éšè—å³ä¸Šè§’èœå•
     document.querySelector('#hideOptionMenu').onclick = function () {
         wx.hideOptionMenu();
     };
 
-    // 8.2 ÏÔÊ¾ÓÒÉÏ½Ç²Ëµ¥
+    // 8.2 æ˜¾ç¤ºå³ä¸Šè§’èœå•
     document.querySelector('#showOptionMenu').onclick = function () {
         wx.showOptionMenu();
     };
 
-    // 8.3 ÅúÁ¿Òş²Ø²Ëµ¥Ïî
+    // 8.3 æ‰¹é‡éšè—èœå•é¡¹
     document.querySelector('#hideMenuItems').onclick = function () {
         wx.hideMenuItems({
             menuList: [
-                'menuItem:readMode', // ÔÄ¶ÁÄ£Ê½
-                'menuItem:share:timeline', // ·ÖÏíµ½ÅóÓÑÈ¦
-                'menuItem:copyUrl' // ¸´ÖÆÁ´½Ó
+                'menuItem:readMode', // é˜…è¯»æ¨¡å¼
+                'menuItem:share:timeline', // åˆ†äº«åˆ°æœ‹å‹åœˆ
+                'menuItem:copyUrl' // å¤åˆ¶é“¾æ¥
             ],
             success: function (res) {
-                alert('ÒÑÒş²Ø¡°ÔÄ¶ÁÄ£Ê½¡±£¬¡°·ÖÏíµ½ÅóÓÑÈ¦¡±£¬¡°¸´ÖÆÁ´½Ó¡±µÈ°´Å¥');
+                alert('å·²éšè—â€œé˜…è¯»æ¨¡å¼â€ï¼Œâ€œåˆ†äº«åˆ°æœ‹å‹åœˆâ€ï¼Œâ€œå¤åˆ¶é“¾æ¥â€ç­‰æŒ‰é’®');
             },
             fail: function (res) {
                 alert(JSON.stringify(res));
@@ -411,16 +411,16 @@ wx.ready(function () {
         });
     };
 
-    // 8.4 ÅúÁ¿ÏÔÊ¾²Ëµ¥Ïî
+    // 8.4 æ‰¹é‡æ˜¾ç¤ºèœå•é¡¹
     document.querySelector('#showMenuItems').onclick = function () {
         wx.showMenuItems({
             menuList: [
-                'menuItem:readMode', // ÔÄ¶ÁÄ£Ê½
-                'menuItem:share:timeline', // ·ÖÏíµ½ÅóÓÑÈ¦
-                'menuItem:copyUrl' // ¸´ÖÆÁ´½Ó
+                'menuItem:readMode', // é˜…è¯»æ¨¡å¼
+                'menuItem:share:timeline', // åˆ†äº«åˆ°æœ‹å‹åœˆ
+                'menuItem:copyUrl' // å¤åˆ¶é“¾æ¥
             ],
             success: function (res) {
-                alert('ÒÑÏÔÊ¾¡°ÔÄ¶ÁÄ£Ê½¡±£¬¡°·ÖÏíµ½ÅóÓÑÈ¦¡±£¬¡°¸´ÖÆÁ´½Ó¡±µÈ°´Å¥');
+                alert('å·²æ˜¾ç¤ºâ€œé˜…è¯»æ¨¡å¼â€ï¼Œâ€œåˆ†äº«åˆ°æœ‹å‹åœˆâ€ï¼Œâ€œå¤åˆ¶é“¾æ¥â€ç­‰æŒ‰é’®');
             },
             fail: function (res) {
                 alert(JSON.stringify(res));
@@ -428,35 +428,35 @@ wx.ready(function () {
         });
     };
 
-    // 8.5 Òş²ØËùÓĞ·Ç»ù±¾²Ëµ¥Ïî
+    // 8.5 éšè—æ‰€æœ‰éåŸºæœ¬èœå•é¡¹
     document.querySelector('#hideAllNonBaseMenuItem').onclick = function () {
         wx.hideAllNonBaseMenuItem({
             success: function () {
-                alert('ÒÑÒş²ØËùÓĞ·Ç»ù±¾²Ëµ¥Ïî');
+                alert('å·²éšè—æ‰€æœ‰éåŸºæœ¬èœå•é¡¹');
             }
         });
     };
 
-    // 8.6 ÏÔÊ¾ËùÓĞ±»Òş²ØµÄ·Ç»ù±¾²Ëµ¥Ïî
+    // 8.6 æ˜¾ç¤ºæ‰€æœ‰è¢«éšè—çš„éåŸºæœ¬èœå•é¡¹
     document.querySelector('#showAllNonBaseMenuItem').onclick = function () {
         wx.showAllNonBaseMenuItem({
             success: function () {
-                alert('ÒÑÏÔÊ¾ËùÓĞ·Ç»ù±¾²Ëµ¥Ïî');
+                alert('å·²æ˜¾ç¤ºæ‰€æœ‰éåŸºæœ¬èœå•é¡¹');
             }
         });
     };
 
-    // 8.7 ¹Ø±Õµ±Ç°´°¿Ú
+    // 8.7 å…³é—­å½“å‰çª—å£
     document.querySelector('#closeWindow').onclick = function () {
         wx.closeWindow();
     };
 
-    // 9 Î¢ĞÅÔ­Éú½Ó¿Ú
-    // 9.1.1 É¨Ãè¶şÎ¬Âë²¢·µ»Ø½á¹û
+    // 9 å¾®ä¿¡åŸç”Ÿæ¥å£
+    // 9.1.1 æ‰«æäºŒç»´ç å¹¶è¿”å›ç»“æœ
     document.querySelector('#scanQRCode0').onclick = function () {
         wx.scanQRCode();
     };
-    // 9.1.2 É¨Ãè¶şÎ¬Âë²¢·µ»Ø½á¹û
+    // 9.1.2 æ‰«æäºŒç»´ç å¹¶è¿”å›ç»“æœ
     document.querySelector('#scanQRCode1').onclick = function () {
         wx.scanQRCode({
             needResult: 1,
@@ -467,20 +467,20 @@ wx.ready(function () {
         });
     };
 
-    // 10 Î¢ĞÅÖ§¸¶½Ó¿Ú
-    // 10.1 ·¢ÆğÒ»¸öÖ§¸¶ÇëÇó
+    // 10 å¾®ä¿¡æ”¯ä»˜æ¥å£
+    // 10.1 å‘èµ·ä¸€ä¸ªæ”¯ä»˜è¯·æ±‚
     document.querySelector('#chooseWXPay').onclick = function () {
-        // ×¢Òâ£º´Ë Demo Ê¹ÓÃ 2.7 °æ±¾Ö§¸¶½Ó¿ÚÊµÏÖ£¬½¨ÒéÊ¹ÓÃ´Ë½Ó¿ÚÊ±²Î¿¼Î¢ĞÅÖ§¸¶Ïà¹Ø×îĞÂÎÄµµ¡£
+        // æ³¨æ„ï¼šæ­¤ Demo ä½¿ç”¨ 2.7 ç‰ˆæœ¬æ”¯ä»˜æ¥å£å®ç°ï¼Œå»ºè®®ä½¿ç”¨æ­¤æ¥å£æ—¶å‚è€ƒå¾®ä¿¡æ”¯ä»˜ç›¸å…³æœ€æ–°æ–‡æ¡£ã€‚
         wx.chooseWXPay({
             timestamp: 1414723227,
             nonceStr: 'noncestr',
             package: 'addition=action_id%3dgaby1234%26limit_pay%3d&bank_type=WX&body=innertest&fee_type=1&input_charset=GBK&notify_url=http%3A%2F%2F120.204.206.246%2Fcgi-bin%2Fmmsupport-bin%2Fnotifypay&out_trade_no=1414723227818375338&partner=1900000109&spbill_create_ip=127.0.0.1&total_fee=1&sign=432B647FE95C7BF73BCD177CEECBEF8D',
-            signType: 'SHA1', // ×¢Òâ£ºĞÂ°æÖ§¸¶½Ó¿ÚÊ¹ÓÃ MD5 ¼ÓÃÜ
+            signType: 'SHA1', // æ³¨æ„ï¼šæ–°ç‰ˆæ”¯ä»˜æ¥å£ä½¿ç”¨ MD5 åŠ å¯†
             paySign: 'bd5b1933cda6e9548862944836a9b52e8c9a2b69'
         });
     };
 
-    // 11.3  Ìø×ªÎ¢ĞÅÉÌÆ·Ò³
+    // 11.3  è·³è½¬å¾®ä¿¡å•†å“é¡µ
     document.querySelector('#openProductSpecificView').onclick = function () {
         wx.openProductSpecificView({
             productId: 'pDF3iY_m2M7EQ5EKKKWd95kAxfNw',
@@ -488,8 +488,8 @@ wx.ready(function () {
         });
     };
 
-    // 12 Î¢ĞÅ¿¨È¯½Ó¿Ú
-    // 12.1 Ìí¼Ó¿¨È¯
+    // 12 å¾®ä¿¡å¡åˆ¸æ¥å£
+    // 12.1 æ·»åŠ å¡åˆ¸
     document.querySelector('#addCard').onclick = function () {
         wx.addCard({
             cardList: [
@@ -503,7 +503,7 @@ wx.ready(function () {
                 }
             ],
             success: function (res) {
-                alert('ÒÑÌí¼Ó¿¨È¯£º' + JSON.stringify(res.cardList));
+                alert('å·²æ·»åŠ å¡åˆ¸ï¼š' + JSON.stringify(res.cardList));
             },
             cancel: function (res) {
                 alert(JSON.stringify(res))
@@ -512,7 +512,7 @@ wx.ready(function () {
     };
 
     var codes = [];
-    // 12.2 Ñ¡Ôñ¿¨È¯
+    // 12.2 é€‰æ‹©å¡åˆ¸
     document.querySelector('#chooseCard').onclick = function () {
         wx.chooseCard({
             cardSign: '6caa49f4a5af3d64ac247e1f563e5b5eb94619ad',
@@ -521,7 +521,7 @@ wx.ready(function () {
             success: function (res) {
                 res.cardList = JSON.parse(res.cardList);
                 encrypt_code = res.cardList[0]['encrypt_code'];
-                alert('ÒÑÑ¡Ôñ¿¨È¯£º' + JSON.stringify(res.cardList));
+                alert('å·²é€‰æ‹©å¡åˆ¸ï¼š' + JSON.stringify(res.cardList));
                 decryptCode(encrypt_code, function (code) {
                     codes.push(code);
                 });
@@ -532,10 +532,10 @@ wx.ready(function () {
         });
     };
 
-    // 12.3 ²é¿´¿¨È¯
+    // 12.3 æŸ¥çœ‹å¡åˆ¸
     document.querySelector('#openCard').onclick = function () {
         if (codes.length < 1) {
-            alert('ÇëÏÈÊ¹ÓÃ chooseCard ½Ó¿ÚÑ¡Ôñ¿¨È¯¡£');
+            alert('è¯·å…ˆä½¿ç”¨ chooseCard æ¥å£é€‰æ‹©å¡åˆ¸ã€‚');
             return false;
         }
         var cardList = [];
@@ -554,8 +554,8 @@ wx.ready(function () {
     };
 
     var shareData = {
-        title: 'Î¢ĞÅJS-SDK Demo',
-        desc: 'Î¢ĞÅJS-SDK,°ïÖúµÚÈı·½ÎªÓÃ»§Ìá¹©¸üÓÅÖÊµÄÒÆ¶¯web·şÎñ',
+        title: 'å¾®ä¿¡JS-SDK Demo',
+        desc: 'å¾®ä¿¡JS-SDK,å¸®åŠ©ç¬¬ä¸‰æ–¹ä¸ºç”¨æˆ·æä¾›æ›´ä¼˜è´¨çš„ç§»åŠ¨webæœåŠ¡',
         link: 'http://demo.open.weixin.qq.com/jssdk/',
         imgUrl: 'http://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRt8Qia4lv7k3M9J1SKqKCImxJCt7j9rHYicKDI45jRPBxdzdyREWnk0ia0N5TMnMfth7SdxtzMvVgXg/0'
     };
